@@ -11,7 +11,7 @@ $words_list = array();
 
 try{
 
-    $db = new \PDO('mysql:dbname=my-vocabulary;host=localhost;charset=utf8mb4', 'my-vocabulary', 'n5B3*sn7');
+    include('inc/db.inc.php');
 
     $start = $_GET['start'];
     $length = $_GET['length'];

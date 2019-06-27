@@ -16,7 +16,7 @@ try {
     if(!isset($_POST))
         throw new Exception('Login Data is empty');
 
-    $db = new \PDO('mysql:dbname=my-vocabulary;host=localhost;charset=utf8mb4', 'my-vocabulary', 'n5B3*sn7');
+    include('inc/db.inc.php');
 
     $auth = new \Delight\Auth\Auth($db);
 

@@ -2,6 +2,7 @@
 node_modules
 /dist
 /public
+/inc/db.inc.php
 
 # local env files
 .env.local
