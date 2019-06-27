@@ -1,0 +1,8 @@
+{
+    "require": {
+        "delight-im/auth": "^8.1",
+        "catfan/medoo": "^1.6",
+        "laracasts/flash": "^3.0",
+        "tamtamchik/simple-flash": "^1.2"
+    }
+}
