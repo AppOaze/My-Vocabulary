@@ -79,11 +79,14 @@ else {
                                 <div class="wt-title">
                                     <h1><span>Learn more vocabulary </span> Everyday</h1>
                                 </div>
+                                <div class="wt-description d-none">
+                                    <p>Come back tomorrow to discover new words and train again your vocabulary</p>
+                                </div>
                             </div>
                             <div class="wt-formtheme wt-formbanner">
                                 <div class="stacked-cards"></div>
                                 <div class="wt-btnarea mt-3 text-center">
-                                    <a href="javascript:void(0);" class="wt-btn" id="js-remove-card">Next Word</a>
+                                    <button class="wt-btn" id="js-remove-card">Next Word</button>
                                 </div>
                             </div>
                         </div>
@@ -148,6 +151,12 @@ else {
 
     $('#js-remove-card').on('click', () => {
         let $activeCard = $stackedCards.children().slice(-1);
+
+        if($stackedCards.children().length == 1){
+            $("#js-remove-card").attr("disabled", "disabled").css("background", 'rgba(255, 88, 81, 0.47)').text("No more words");
+            $('.wt-bannerhead .wt-description').removeClass("d-none ")
+        }
+
         $activeCard.removeClass('wt-card--added');
         setTimeout(() => {
             requestAnimationFrame(() => {
