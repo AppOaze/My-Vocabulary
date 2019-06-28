@@ -26,6 +26,8 @@ try{
     $language_id = $_POST['language'];
     $translation_name = $_POST['translation'];
 
+    if(!isset($word_name) || !isset($language_id) || !isset($translation_name))
+        throw new Exception('You forgot to enter the world or translation');
 
     // word exist ?
     $word_exist = $db->prepare("SELECT id FROM words WHERE name='$word_name' LIMIT 1");
